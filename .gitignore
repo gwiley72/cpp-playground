@@ -1,6 +1,5 @@
 # Prerequisites
 *.d
-*.suo
 
 # Compiled Object files
 *.slo
@@ -34,3 +33,8 @@
 
 # Directories
 *Debug
+
+# VS specific
+*VC.db
+*VC.opendb
+*.suo
