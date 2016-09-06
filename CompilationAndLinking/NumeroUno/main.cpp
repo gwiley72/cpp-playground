@@ -1,11 +1,19 @@
 #include <iostream>
+#include <cassert>
+#include "../StaticLib/foo.h"
+#include "../DynamicLib/DynamicLib.h"
+using namespace std;
+
 #include "foo.h"
 
 int main()
 {
-	int x = add1(2);
+	cout << "2+3=" << add(2, 3) << endl;
 
-	std::cout << "Hello, C++" << std::endl;
+	cout << "2*3=" << multiply(2, 3) << endl;
+
+	cout << "Hello, C++" << endl;
+
 	getchar();
 
 	return 0;
