@@ -20,5 +20,5 @@ public:
 extern DYNAMICLIB_API int nDynamicLib;
 
 DYNAMICLIB_API int fnDynamicLib(void);
-
+ 
 extern "C" DYNAMICLIB_API int multiply(int a, int b);
