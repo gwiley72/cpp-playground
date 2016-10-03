@@ -1,18 +1,21 @@
 #include "stdafx.h"
+#include <memory>
 
 class Address
 {
 public:
 	string city;
 
+	Address(){}
+
 	Address(string const& city) : city(city)
 	{
-		cout << "Address created" << endl;
+		cout << city << " created" << endl;
 	}
 
 	~Address()
 	{
-		cout << "Address destroyed" << endl;
+		cout << city << " destroyed" << endl;
 	}
 };
 
@@ -65,17 +68,14 @@ void move_rvalue()
 	
 }
 
+unique_ptr<Address> create_address(const string& city)
+{
+	return unique_ptr<Address>(new Address(city));
+}
+
 int main(int argc, char* argv[])
 {
-	move_rvalue();
-	//Address* a;
-
-	//{
-	//	Person p("New York");
-	//	a = p.address;
-	//}
-
-	//cout << a->city << endl;
+	auto a = create_address("Paris");
 
 	getchar();
 	return 0;
