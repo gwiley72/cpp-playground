@@ -56,8 +56,18 @@ public:
 	}
 };
 
+void inc(int& x) {	x++; }
+
+void move_rvalue()
+{
+	int a = 0;
+	inc(a);
+	
+}
+
 int main(int argc, char* argv[])
 {
+	move_rvalue();
 	//Address* a;
 
 	//{
